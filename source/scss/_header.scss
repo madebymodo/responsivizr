@@ -41,6 +41,7 @@ header {
 .bottomheader {
 	background: $c-bottomheader;
 	clear: both;
+	font-family: "Adelle sans", sans-serif;
 	font-size: 12px;
 	line-height: 33px;
 	border-bottom: 1px solid #E8E8E8;
@@ -118,7 +119,7 @@ header {
 			&:empty {
 				opacity: .8;
 				cursor: default;
-				
+
 				&:after {
 					white-space: nowrap;
 					content: "There are no sets to load";
@@ -130,7 +131,7 @@ header {
 				white-space: nowrap;
 			}
 		}
-		
+
 		.setList__wrapper {
 			position: relative;
 			padding: 0 8px;
