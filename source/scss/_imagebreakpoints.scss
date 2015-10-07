@@ -41,7 +41,6 @@
 }
 
 .chart {
-	// padding: 10px 0 0;
 	position: relative;
 	outline: none;
 	margin-bottom: 30px;
@@ -69,9 +68,7 @@
 			text-indent: 20px;
 			color: $c-text;
 		}
-
 	}
-
 }
 
 .markers {
@@ -218,7 +215,7 @@
 	background: $c-4x;
 }
 
-// spacing image lines into same-dpi groups
+// grouping same-dpi
 .\@1x + .\@2x,
 .\@1x + .\@3x,
 .\@1x + .\@4x,
@@ -293,7 +290,6 @@
 	list-style: none;
 	margin: 0;
 	padding-left: 10%;
-	// background-color: #23262B;
 
 	li {
 		cursor: pointer;
@@ -307,10 +303,6 @@
 		background: #EAEAEA;
 		padding: 7px 11px 8px 11px;
 		border-top: 4px solid #B0B4BB;
-		// border-left: 1px solid #282C34;
-		// border-right: 1px solid #282C34;
-		// border-bottom: 1px solid #1A1D21;
-		// height: px;
 		opacity: .3;
 		color: #000;
 	}
@@ -318,7 +310,6 @@
 	.isActive {
 		border-top: 4px solid $c-highlight-color;
 		opacity: 1;
-		// height: 10px;
 	}
 
 }

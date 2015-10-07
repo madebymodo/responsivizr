@@ -30,7 +30,6 @@ input {
 label span {
 	color: $c-form-inactive;
 	font-size: 12px;
-	// text-transform: lowercase;
 }
 
 label input:focus + span {
@@ -120,15 +119,10 @@ label.isRequiredAndEmpty {
 
 	&::before {
 		font-size: 80%;
-		// white-space: nowrap;
 		position: absolute;
 		z-index: 1;
 		content: attr(data-required-message);
 		top: 150%;
-		// left: 50%;
-		// -webkit-transform: translateX(-50%);
-		// transform: translateX(-50%);
-		// color: blue;
 		background-color: rgba(242, 242, 242, .75);
 		box-shadow:  0 3px 3px rgba(242, 242, 242, .75);
 		color: $c-form-required;
@@ -141,7 +135,6 @@ label.isRequiredAndEmpty {
 	}
 
 	input {
-		// background: rgba(255, 200, 0, .5);
 		border-bottom-color: $c-form-required;
 	}
 }
@@ -149,12 +142,10 @@ label.isRequiredAndEmpty {
 label.isInvalid {
 	&::before {
 		content: attr(data-invalid-message);
-		// color: blue;
 		color: $c-form-invalid;
 	}
 
 	input {
-		// background: rgba(255, 0, 0, .5);
 		border-bottom-color: $c-form-invalid;
 	}
 }

@@ -1,10 +1,7 @@
-
 /* imagebreakpoints */
-
 $page-background: #FAFAFA;
 $c-modo: #58AFDB;
 $c-text: #676767;
-
 
 // header colors
 $c-topheader: #F7F7F7;
@@ -17,7 +14,6 @@ $c-3x: #E43350;
 $c-4x: #8EB1B1;
 
 // bar shape
-
 $bar-cornerRadius: 2px;
 $bar-height: 14px;
 $bar-textSize: 11px;
@@ -37,17 +33,13 @@ $c-form-text: #394048;
 $c-form-placeholder: #d1d1d1;
 
 /* form validation */
-// $c-form-invalid: #ff0000;
 $c-form-invalid: rgba(255, 0, 0, .75);
-// $c-form-required: rgb(92, 147, 0);
 $c-form-required: $c-modo;
-
 
 // width between 320px and 1400px
 $minWidth: 320px;
 $maxWidth: 1400px;
 $chartArea: $maxWidth - $minWidth;
-
 
 $iphone3gs-landscape: 480px;
 $iphone3gs-portrait:  320px;
@@ -72,12 +64,10 @@ $ipad3-portrait: 1536px;
 
 
 %cf {
-	// *zoom: 1;
-
 	&:before,
 	&:after {
-		content: " "; /* 1 */
-		display: table; /* 2 */
+		content: " ";
+		display: table;
 	}
 
 	&:after {

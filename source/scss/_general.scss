@@ -20,34 +20,6 @@ fieldset {
 	border: 0;
 }
 
-// nav {
-// 	display: none
-// }
-
-// .modolab {
-// 	font-size: 36px;
-// 	font-weight: 200;
-// 	margin: 20px;
-//
-// 	color: rgba(#ffffff, 0.6);
-// 	float: right;
-//
-// 	strong {
-// 		color: rgba(#ffffff, 0.8);
-// 	}
-//
-// 	&:after {
-// 		content: '|';
-// 		color: #fff;
-// 	}
-// }
-
-// h1 {
-// 	margin: 20px;
-// 	display: inline-block;
-// }
-
-
 h2 {
 	font-size: 45px;
 	text-align: center;
@@ -58,7 +30,6 @@ h3 {
 	margin: 0 auto 30px;
 	padding: 40px 0 0 0;
 	line-height: 40px;
-	// text-align: center;
 	color: #686A6D;
 	text-transform: uppercase;
 	font-size: 22px;
@@ -66,7 +37,6 @@ h3 {
 
 	&:before {
 		content: counter(steps-counter);
-		// border-radius: 50%;
 		border-right: 1px solid #686A6D;
 		color: $c-highlight-color;
 		width: 35px;
@@ -77,7 +47,6 @@ h3 {
 		margin-left: -50px;
 		font-size: 15px;
 		float: left;
-		// border: 1px solid #686A6D;
 		font-weight: bold;
 	}
 }
@@ -147,8 +116,6 @@ code {
 	position: relative;
 	padding: 3em 0 0 10%;
 	background: $c-form-background;
-	// max-width: 900px;
-	// border-left: 10px solid $c-form-hightlight;
 
 	label span {
 		position: relative;
@@ -159,21 +126,14 @@ code {
 }
 
 .datainput {
-	// border-collapse: collapse;
 	margin: 0;
-	// padding: 3em 0 0 10%;
 	position: relative;
 	background: $c-form-background;
-	// border-left: 10px solid $c-form-hightlight;
 
 	td {
 		position: relative;
 		height: 80px;
 		padding: 0 20px;
-
-		// &.projectName {
-			// height: 140px;
-		// }
 
 		&:first-child {
 			padding-left: 0;
@@ -232,7 +192,6 @@ button.removeBreakpoint {
 		color: $c-modo;
 
 		&:hover {
-			// border-bottom: 1px solid $c-modo;
 			text-decoration: underline;
 		}
 	}
