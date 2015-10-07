@@ -1,13 +1,10 @@
-#forkongithub {
-
-}
 
 #forkongithub a {
 	display: block;
 	background: #DEDEDE;
 	color: #7B7B7B;
 	text-decoration: none;
-	font-family: arial,sans-serif;
+	font-family: arial, sans-serif;
 	text-align: right;
 	font-weight: bold;
 	padding: 9px 40px 5px;
@@ -32,39 +29,38 @@
 		width: 200px;
 		overflow: hidden;
 		height: 200px;
-	}
 
-	#forkongithub a {
-		background: #676767;
-		color: #fff;
-		width: 200px;
-		position: absolute;
-		top: 60px;
-		right: -60px;
-		padding: 5px 40px;
-		text-align: center;
-		-webkit-transform: rotate(45deg);
-		-ms-transform: rotate(45deg);
-		-moz-transform: rotate(45deg);
-		-o-transform: rotate(45deg);
-		transform: rotate(45deg);
-		// box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.8);
-
-		&:before,
-		&:after {
-			content: "";
-			width: 100%;
-			display: block;
+		a {
+			background: #676767;
+			color: #fff;
+			width: 200px;
 			position: absolute;
-			top: 1px;
-			left: 0;
-			height: 1px;
-			background: #fff;
-		}
+			top: 60px;
+			right: -60px;
+			padding: 5px 40px;
+			text-align: center;
+			-webkit-transform: rotate(45deg);
+			-ms-transform: rotate(45deg);
+			-moz-transform: rotate(45deg);
+			-o-transform: rotate(45deg);
+			transform: rotate(45deg);
 
-		&:after {
-			bottom: 1px;
-			top: auto;
+			&:before,
+			&:after {
+				content: "";
+				width: 100%;
+				display: block;
+				position: absolute;
+				top: 1px;
+				left: 0;
+				height: 1px;
+				background: #fff;
+			}
+
+			&:after {
+				bottom: 1px;
+				top: auto;
+			}
 		}
 	}
 }
