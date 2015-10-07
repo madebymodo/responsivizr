@@ -1,0 +1,76 @@
+$snippet-tag: #449FDC;
+$snippet-attr: #6A8188;
+$snippet-equal: #449FDC;
+$snippet-quote: #52AFA9;
+$snippet-value: #52AFA9;
+$snippet-tabWidth: 4ch;
+
+.snippetList {
+	display: none;
+	margin: 0 10%;
+}
+.snippet {
+	border: 1px solid $c-highlight-color;
+	white-space: pre-wrap;
+	padding: 30px;
+	margin: 0 10%;
+	cursor: pointer;
+	overflow: hidden;
+	color: $snippet-tag;
+}
+
+.snippet__attr {
+	color: $snippet-attr;
+}
+
+.snippet__equal {
+	color: $snippet-equal;
+}
+
+.snippet__quote {
+	color: $snippet-quote;
+}
+
+.snippet__value {
+	color: $snippet-value;
+}
+
+.snippet__source {
+	display: block;
+	padding-left: $snippet-tabWidth;
+
+	.snippet__quote + .snippet__attr::before {
+		content: '\000A         ';
+	}
+
+	.snippet__srcsetItem + .snippet__srcsetItem::before {
+		content: '\000A                 ';
+	}
+}
+
+.snippet__img {
+	.snippet__source + & {
+		display: block;
+		padding-left: $snippet-tabWidth;
+		&::before {
+			content: '\000A';
+		}
+	}
+
+	.snippet__quote + .snippet__attr::before {
+		content: '\000A      ';
+	}
+
+	.snippet__sizesItem + .snippet__sizesItem::before {
+		content: '\000A             ';
+	}
+
+	.snippet__srcsetItem + .snippet__srcsetItem::before {
+		content: '\000A              ';
+	}
+}
+
+.snippet__button {
+	margin-left: 10%;
+	margin-top: 20px;
+}

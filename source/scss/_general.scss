@@ -1,0 +1,239 @@
+body,
+figure {
+	margin: 0;
+	font-size: 18px;
+}
+
+body {
+	background: $page-background;
+	color: $c-text;
+	counter-reset: steps-counter;
+	font-family: "Adelle", serif;
+	padding-top: 150px;
+}
+
+h3,
+h4 {
+	font-family: "Adelle Sans", sans-serif;
+}
+fieldset {
+	border: 0;
+}
+
+// nav {
+// 	display: none
+// }
+
+// .modolab {
+// 	font-size: 36px;
+// 	font-weight: 200;
+// 	margin: 20px;
+//
+// 	color: rgba(#ffffff, 0.6);
+// 	float: right;
+//
+// 	strong {
+// 		color: rgba(#ffffff, 0.8);
+// 	}
+//
+// 	&:after {
+// 		content: '|';
+// 		color: #fff;
+// 	}
+// }
+
+// h1 {
+// 	margin: 20px;
+// 	display: inline-block;
+// }
+
+
+h2 {
+	font-size: 45px;
+	text-align: center;
+}
+
+h3 {
+	counter-increment: steps-counter;
+	margin: 0 auto 30px;
+	padding: 40px 0 0 0;
+	line-height: 40px;
+	// text-align: center;
+	color: #686A6D;
+	text-transform: uppercase;
+	font-size: 22px;
+	font-weight: 200;
+
+	&:before {
+		content: counter(steps-counter);
+		// border-radius: 50%;
+		border-right: 1px solid #686A6D;
+		color: $c-highlight-color;
+		width: 35px;
+		height: 35px;
+		line-height: 40px;
+		display: inline-block;
+		text-align: center;
+		margin-left: -50px;
+		font-size: 15px;
+		float: left;
+		// border: 1px solid #686A6D;
+		font-weight: bold;
+	}
+}
+
+h4 {
+	margin: 0 auto 30px;
+	padding: 20px 0 0 0;
+	line-height: 40px;
+	color: $c-text;
+	text-transform: uppercase;
+	font-size: 22px;
+	font-weight: 200;
+	border-bottom: 1px solid $c-modo;
+}
+
+h3,
+p,
+ul,
+ol {
+	margin-left: 10%;
+	margin-right: 10%;
+}
+
+ol li {
+	margin-bottom: 0.4rem;
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
+
+code, kbd {
+	font-size: .8rem;
+	font-family: Monaco, Menlo, Consolas, "Courier New", monospace!important;
+	font-style: normal!important;
+	white-space: normal;
+}
+
+code {
+	padding: 1px 3px;
+	border: 1px solid #e8e8e8;
+	border-radius: .2rem;
+	background: #f9f9f9;
+	color: #c25;
+}
+
+.longdesc {
+	font-style: italic;
+	padding-left: 3em;
+	line-height: 1.5;
+}
+
+.moreinfo__label {
+	font-family: "Adelle Sans", sans-serif;
+	font-size: small;
+}
+
+.projectName {
+	width: 300px;
+
+	input {
+		width: 250px;
+	}
+}
+
+.dataholder {
+	position: relative;
+	padding: 3em 0 0 10%;
+	background: $c-form-background;
+	// max-width: 900px;
+	// border-left: 10px solid $c-form-hightlight;
+
+	label span {
+		position: relative;
+		top: -54px;
+		left: 0;
+		display: block;
+	}
+}
+
+.datainput {
+	// border-collapse: collapse;
+	margin: 0;
+	// padding: 3em 0 0 10%;
+	position: relative;
+	background: $c-form-background;
+	// border-left: 10px solid $c-form-hightlight;
+
+	td {
+		position: relative;
+		height: 80px;
+		padding: 0 20px;
+
+		// &.projectName {
+			// height: 140px;
+		// }
+
+		&:first-child {
+			padding-left: 0;
+		}
+	}
+
+	label span {
+		position: relative;
+		top: -54px;
+		left: 0;
+		display: block;
+	}
+
+	.viewport__bound,
+	.comp__size {
+		width: 70px;
+	}
+
+	.image__size {
+		width: 120px;
+	}
+
+	.current label span {
+		color: $c-form-inactive;
+	}
+
+	.current label input:focus + span {
+		color: $c-form-focus;
+	}
+}
+
+[data-action="toggleIsActive"] {
+	cursor: pointer;
+}
+.hiddenWhenInactive {
+	display: none;
+	&.isActive {
+		display: block;
+	}
+}
+
+button.removeBreakpoint {
+	font-size: 30px;
+	margin-bottom: 15px;
+}
+
+.feedback {
+	margin: 80px 0;
+	text-align: center;
+	font-size: 20px;
+	line-height: 1.4;
+	font-weight: 100;
+
+	a {
+		text-decoration: none;
+		color: $c-modo;
+
+		&:hover {
+			// border-bottom: 1px solid $c-modo;
+			text-decoration: underline;
+		}
+	}
+}

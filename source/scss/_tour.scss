@@ -1,0 +1,56 @@
+
+
+ol.tour {
+	@extend %cf;
+	padding: 0;
+	counter-reset: tour-steps;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+	align-items: flex-start;
+
+
+	li:before {
+		display: block;
+		border-bottom: 1px solid #999;
+		font-family: "Adelle Sans", sans-serif;
+		height: 50px;
+		width: 50px;
+		position: relative;
+		left: 50%;
+		top: -15px;
+		margin-left: -25px;
+		color: $c-highlight-color;
+		line-height: 50px;
+		font-size: 18px;
+		text-align: center;
+		content: counter(tour-steps);
+		font-style: normal;
+	}
+
+	li {
+		width: 15%;
+		min-width: 120px;
+		font-size: 14px;
+		margin-left: 0;
+		padding: 3em 2em;
+		position: relative;
+		display: block;
+		float: left;
+		flex: 1 1 auto;
+		text-align: center;
+		counter-increment: tour-steps;
+		max-width: 25%;
+	 	font-style: italic;
+	}
+
+	em {
+		font-family: "Adelle Sans", sans-serif;
+		display: block;
+		font-weight: 100;
+		text-transform: uppercase;
+		font-style: normal;
+		font-size: 18px;
+		padding-bottom: .5em;
+	}
+}

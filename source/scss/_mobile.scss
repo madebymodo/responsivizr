@@ -1,0 +1,71 @@
+.mobile {
+	margin: 0 10%;
+}
+
+@media screen and (min-width: 960px) {
+	.mobile {
+		display: none;
+	}
+}
+
+@media screen and (max-width: 959px) {
+	body {
+		padding-top: 0px;
+	}
+
+	header {
+		position: relative;
+	}
+
+	.bottomheader,
+	.topheader .madebymodo,
+	section {
+		display: none;
+	}
+
+
+	.topheader {
+		border-bottom: 0;
+
+		h1 {
+			text-align: center;
+			float: none;
+			padding-left: 0;
+
+			svg {
+				width: 80%;
+			}
+
+		}
+	}
+
+	.mobile {
+		display: block;
+
+		p:last-child:after {
+			content: '';
+			width: 140%;
+			padding-bottom: 140%;
+			display: block;
+			background: url(images/continuum.png) top center no-repeat;
+			margin: -40px -20% 0 -20%;
+			background-size: contain;
+			max-width: 370px;
+			margin: 0 auto;
+		}
+	}
+
+
+
+	footer {
+		background: transparent;
+		text-align: center;
+		line-height: 1.5;
+
+	}
+
+	.licence {
+		float: none;
+		display: block;
+	}
+}

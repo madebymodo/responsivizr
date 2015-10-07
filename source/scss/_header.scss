@@ -1,0 +1,153 @@
+header {
+	position: fixed;
+	width: 100%;
+	z-index: 40;
+	top: 0;
+}
+
+.topheader {
+	background: $c-topheader;
+	border-bottom: 2px solid #E8E8E8;
+	height: 75px;
+
+	h1 {
+		margin: 0 auto;
+		padding-top: 20px;
+		// text-align: center;
+		float: left;
+		padding-left: 10%;
+
+		// svg .version {
+			// display: none;
+		// }
+
+		// &:hover svg .version {
+			// display: block
+		// }
+	}
+
+	.madebymodo {
+		float: right;
+		margin-right: 10%;
+		padding-top: 10px;
+		display: block;
+	}
+
+
+	// h1:hover svg .version {display: block;}
+
+}
+
+.bottomheader {
+	background: $c-bottomheader;
+	clear: both;
+	font-size: 12px;
+	line-height: 33px;
+	border-bottom: 1px solid #E8E8E8;
+
+	// .currentSet {
+	// 	float: left;
+	// 	padding-left: 10%;
+	// 	background: $c-highlight-color;
+	// 	color: #000;
+	// 	padding-right: 15px;
+	// 	line-height: 35px;
+	//
+	// 	.setName {
+	// 		color: white;
+	// 		padding-left: 5px;
+	//
+	// 	}
+	// }
+
+	ul {
+		margin: 0 0 0 -8px;
+		list-style: none;
+		padding-left: 0;
+
+		li {
+			display: inline;
+			padding-right: 2%;
+		}
+
+		button {
+			border:0;
+			background: transparent;
+			color: #767676;
+			line-height: 33px;
+			text-transform: uppercase;
+			font-weight: bold;
+			padding-top: 0;
+			padding-bottom: 0;
+			font-size: 11px;
+			cursor: pointer;
+			vertical-align: baseline;
+			text-align: left;
+
+			&:hover {
+				color: $c-highlight-color;
+			}
+		}
+
+		a {
+			color: #767676;
+			text-decoration: none;
+			line-height: 33px;
+			text-transform: uppercase;
+			font-weight: bold;
+			font-size: 11px;
+			vertical-align: -1px;
+
+			&:hover {
+				// text-decoration: underline;
+				color: $c-highlight-color;
+			}
+		}
+
+		.setList {
+			display: none;
+			position: absolute;
+			top: 100%;
+			left: 50%;
+			-webkit-transform: translateX(-50%);
+			transform: translateX(-50%);
+			padding: 20px;
+			background: $c-modo;
+			color: white;
+
+			&:empty {
+				opacity: .8;
+				cursor: default;
+				
+				&:after {
+					white-space: nowrap;
+					content: "There are no sets to load";
+				}
+			}
+
+			li {
+				display: block;
+				white-space: nowrap;
+			}
+		}
+		
+		.setList__wrapper {
+			position: relative;
+			padding: 0 8px;
+			min-width: 48px;
+			display: inline-block;
+
+			&:hover .setList {
+				display: block;
+			}
+		}
+	}
+}
+
+.setMenu {
+	padding-left: 10%;
+
+	ul {
+		// padding-left: 0;
+	}
+}

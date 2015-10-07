@@ -1,0 +1,159 @@
+
+label,
+input {
+	font-family: "Adelle Sans", sans-serif;
+}
+
+input {
+	border: 0;
+	background: transparent;
+	border-bottom: 1px solid $c-form-inactive;
+	padding: 8px 0;
+	min-width: 7em;
+	font-size: 14px;
+	color: $c-form-focus;
+	-webkit-text-fill-color: $c-form-text;
+	margin-bottom: 1px;
+
+	&::-webkit-input-placeholder {
+		font-style: italic;
+		-webkit-text-fill-color: $c-form-placeholder;
+	}
+
+	&:focus {
+		margin-bottom: 0px;
+		outline: 0;
+		border-bottom: 2px solid $c-form-focus;
+	}
+}
+
+label span {
+	color: $c-form-inactive;
+	font-size: 12px;
+	// text-transform: lowercase;
+}
+
+label input:focus + span {
+	color: $c-form-focus;
+}
+
+.datainput input[type="checkbox"] {
+	margin-bottom: 20px;
+}
+
+label input[type="checkbox"] + span {
+	top: 0;
+	display: inline;
+	padding-left: .3em;
+}
+
+label input[type="checkbox"]:checked + span {
+	color: $c-form-text;
+}
+
+
+button {
+	background: 0 0;
+	border: none;
+	border-radius: 2px;
+	color: $c-text;
+	position: relative;
+	height: 36px;
+	min-width: 64px;
+	padding: 0 8px;
+	display: inline-block;
+	font-size: 14px;
+	font-weight: 500;
+	text-transform: uppercase;
+	letter-spacing: 0;
+	overflow: hidden;
+	will-change: box-shadow, transform;
+	-webkit-transition: box-shadow .2s cubic-bezier(.4, 0, 1, 1), background-color .2s cubic-bezier(.4, 0, .2, 1), color .2s cubic-bezier(.4, 0, .2, 1);
+	transition: box-shadow .2s cubic-bezier(.4, 0, 1, 1), background-color .2s cubic-bezier(.4, 0, .2, 1), color .2s cubic-bezier(.4, 0, .2, 1);
+	outline: none;
+	cursor: pointer;
+	text-decoration: none;
+	text-align: center;
+	line-height: 36px;
+	vertical-align: middle;
+
+	&:hover,
+	&.zeroclipboard-is-hover {
+		background-color: rgba(158,158,158,.2);
+	}
+
+	&.warning:hover,
+	&.warning.zeroclipboard-is-hover {
+		background-color: rgba(255,0,0,.2);
+	}
+}
+
+button[disabled] {
+	color: rgba(0,0,0,.26);
+	cursor: auto;
+	background-color: transparent;
+
+	&:hover,
+	&.zeroclipboard-is-hover {
+		background-color: transparent;
+	}
+}
+
+button + button {
+	margin-left: 8px;
+}
+
+button.raised {
+	background: rgba(158,158,158,.2);
+	box-shadow: 0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12);
+
+	&:hover,
+	&.zeroclipboard-is-hover {
+		background-color: rgba(158,158,158,.4);
+	}
+}
+
+label.isInvalid,
+label.isRequiredAndEmpty {
+	position: relative;
+
+	&::before {
+		font-size: 80%;
+		// white-space: nowrap;
+		position: absolute;
+		z-index: 1;
+		content: attr(data-required-message);
+		top: 150%;
+		// left: 50%;
+		// -webkit-transform: translateX(-50%);
+		// transform: translateX(-50%);
+		// color: blue;
+		background-color: rgba(242, 242, 242, .75);
+		box-shadow:  0 3px 3px rgba(242, 242, 242, .75);
+		color: $c-form-required;
+	}
+}
+
+label.isRequiredAndEmpty {
+	&::before {
+		content: attr(data-required-message);
+	}
+
+	input {
+		// background: rgba(255, 200, 0, .5);
+		border-bottom-color: $c-form-required;
+	}
+}
+
+label.isInvalid {
+	&::before {
+		content: attr(data-invalid-message);
+		// color: blue;
+		color: $c-form-invalid;
+	}
+
+	input {
+		// background: rgba(255, 0, 0, .5);
+		border-bottom-color: $c-form-invalid;
+	}
+}

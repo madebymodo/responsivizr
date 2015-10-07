@@ -1,0 +1,324 @@
+
+
+.imagebreakpoints {
+	margin-top: 30px;
+	overflow: hidden;
+
+	figure {
+		margin: 50px 0;
+
+		figcaption {
+		}
+	}
+
+	figure,
+	.tools {
+		-webkit-touch-callout: none;
+		-webkit-user-select: none;
+		-khtml-user-select: none;
+		-moz-user-select: none;
+		-ms-user-select: none;
+		user-select: none;
+	}
+
+	h1 {
+		font-size: 16px;
+		margin: 0;
+		text-transform: uppercase;
+	}
+
+	h2 {
+		margin: 0;
+		font-size: 13px;
+		font-weight: normal;
+		opacity:.6;
+	}
+}
+
+.chart__wrapper {
+	background: #EAEAEA;
+	padding: 0 2%;
+}
+
+.chart {
+	// padding: 10px 0 0;
+	position: relative;
+	outline: none;
+	margin-bottom: 30px;
+}
+
+.images {
+	padding: 30px 0;
+
+	div {
+		position: relative;
+		z-index: 2;
+		border-radius: $bar-cornerRadius;
+		text-align: center;
+		font-size: $bar-textSize;
+		line-height: $bar-height;
+		height: $bar-height;
+		margin: 1px 0;
+		color: white;
+
+		&.fixedWidth {
+			width: 14px;
+			-webkit-transform: translateX(-50%);
+			transform: translateX(-50%);
+			border-radius: 50%;
+			text-indent: 20px;
+			color: $c-text;
+		}
+
+	}
+
+}
+
+.markers {
+	pointer-events: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+
+	div {
+		border-left: 1px solid $page-background;
+		height: 100%;
+		position: absolute;
+	}
+
+	span {
+		position: absolute;
+		bottom: -25px;
+		width: 50px;
+		padding-top: 5px;
+		margin-left: -25px;
+		color: #afaeae;
+		text-align: center;
+	}
+
+	div {
+		&:first-child,
+		&:last-child {
+			display:none;
+
+			span {
+				bottom: auto;
+				top: 0;
+			}
+		}
+	}
+}
+
+.cut {
+	display: none;
+	position: absolute;
+	height: 100%;
+	top: 0;
+	width: 1px;
+	background-color: #45A0FF;
+	background-clip: content-box;
+	padding: 0 5px;
+	margin-left: -5px;
+	cursor: ew-resize;
+
+	.hairline & {
+		width: .5px
+	}
+
+	&.hover,
+	&:hover {
+		background-color: #7408fe;
+	}
+
+	[data-action="cutWrapper"] & {
+		display: block;
+	}
+
+	.chart:focus &.isActive {
+		background-color: #0057ec;
+
+		&:after {
+			position: absolute;
+			z-index: 3;
+			top: 0px;
+			left: 50%;
+			-webkit-transform: translateX(-50%);
+			transform: translateX(-50%);
+			background: #0057ec;
+			color: white;
+			font-size: 12px;
+			padding: 3px 5px;
+			content: attr(title);
+			border-bottom-left-radius: 3px;
+			border-bottom-right-radius: 3px;
+			border-width: 0;
+			border-bottom-width: 1px;
+			border-style: solid;
+			border-color: #1A1D21;
+		}
+	}
+}
+
+.tools {
+	position: relative;
+	right: 0;
+	top: 0;
+	text-align: right;
+	padding: 0 0 10px;
+	z-index: 2;
+
+	legend {
+		display: none;
+	}
+}
+
+.dpi {
+	list-style: none;
+	margin: 0 auto;
+	font-family: sans-serif;
+	padding: 0;
+
+	li {
+		margin: 0;
+		display: inline-block;
+	}
+
+	label input + span {
+		margin-right: 10px;
+		text-align: center;
+		line-height: 20px;
+		color: white;
+		border-radius: $bar-cornerRadius;
+		font-size: $bar-textSize;
+		line-height: $bar-height;
+		opacity: .5;
+	}
+
+	label input:checked + span {
+		opacity: 1;
+		color: white;
+	}
+}
+
+.\@1x {
+	background: $c-1x;
+}
+
+.\@2x {
+	background: $c-2x;
+}
+
+.\@3x {
+	background: $c-3x;
+}
+
+.\@4x {
+	background: $c-4x;
+}
+
+// spacing image lines into same-dpi groups
+.\@1x + .\@2x,
+.\@1x + .\@3x,
+.\@1x + .\@4x,
+.\@2x + .\@3x,
+.\@2x + .\@4x,
+.\@3x + .\@4x,
+ {
+	margin-top: 20px;
+}
+
+.chartinfo {
+	position: relative;
+	z-index: 2;
+}
+
+.chartinfo__text {
+	width: 80%;
+	border: 1px solid $c-tips-color;
+	border-radius: 5px;
+	color: $c-tips-color;
+	background: $c-tips-background;
+	padding: 30px;
+	line-height: 2;
+	font-weight: 100;
+
+	p {margin: 0 0 1em}
+
+	strong {
+		font-weight: 600;
+
+	}
+}
+.chartinfo__text--noAd {
+	display: none;
+	[data-action="cutWrapper"] & {
+		display: block;
+	}
+}
+.chartinfo__text--ad {
+	[data-action="cutWrapper"] & {
+		display: none;
+	}
+}
+.chartinfo__switch {
+	position: absolute;
+	top: -40px;
+	font-size: 13px;
+	text-decoration: none;
+	color: #7b7b7b;
+	line-height: 18px;
+
+	&::before {
+		content: '?';
+		display: inline-block;
+		margin-right: 1ch;
+		color: $c-tips-color;
+		background-color: $c-tips-background;
+		width: 15px;
+		text-align: center;
+		height: 15px;
+		border: 1px solid $c-tips-color;
+		border-radius: 50%;
+		padding: 5px 5px 4px 5px;
+	}
+	&.isActive::before {
+		content: "𝗫";
+	}
+}
+
+.snippetList,
+.chartsList {
+	list-style: none;
+	margin: 0;
+	padding-left: 10%;
+	// background-color: #23262B;
+
+	li {
+		cursor: pointer;
+		text-align: center;
+		font-size: 11px;
+		line-height: 14px;
+		display: inline-block;
+		z-index: 2;
+		min-width: 100px;
+		margin-right: 3px;
+		background: #EAEAEA;
+		padding: 7px 11px 8px 11px;
+		border-top: 4px solid #B0B4BB;
+		// border-left: 1px solid #282C34;
+		// border-right: 1px solid #282C34;
+		// border-bottom: 1px solid #1A1D21;
+		// height: px;
+		opacity: .3;
+		color: #000;
+	}
+
+	.isActive {
+		border-top: 4px solid $c-highlight-color;
+		opacity: 1;
+		// height: 10px;
+	}
+
+}
