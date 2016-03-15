@@ -1,7 +1,7 @@
 
 label,
 input {
-	font-family: "Adelle Sans", sans-serif;
+	@extend %f-sans;
 }
 
 input {
@@ -52,6 +52,7 @@ label input[type="checkbox"]:checked + span {
 
 
 button {
+	@extend %f-sans;
 	background: 0 0;
 	border: none;
 	border-radius: 2px;
@@ -61,7 +62,6 @@ button {
 	min-width: 64px;
 	padding: 0 8px;
 	display: inline-block;
-	font-family: "Adelle sans", sans-serif;
 	font-size: 14px;
 	font-weight: 500;
 	text-transform: uppercase;
@@ -76,6 +76,10 @@ button {
 	text-align: center;
 	line-height: 36px;
 	vertical-align: middle;
+
+	&.removeBreakpoint {
+		font-family: "Arial", sans;
+	}
 
 	&:hover,
 	&.zeroclipboard-is-hover {

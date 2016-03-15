@@ -10,9 +10,9 @@ ol.tour {
 	align-items: flex-start;
 
 	li:before {
+		@extend %f-sans;
 		display: block;
 		border-bottom: 1px solid #999;
-		font-family: "Adelle Sans", sans-serif;
 		height: 50px;
 		width: 50px;
 		position: relative;
@@ -44,7 +44,7 @@ ol.tour {
 	}
 
 	em {
-		font-family: "Adelle Sans", sans-serif;
+		@extend %f-sans;
 		display: block;
 		font-weight: 100;
 		text-transform: uppercase;

@@ -5,16 +5,16 @@ figure {
 }
 
 body {
+	@extend %f-serif;
 	background: $page-background;
 	color: $c-text;
 	counter-reset: steps-counter;
-	font-family: "Adelle", serif;
 	padding-top: 150px;
 }
 
 h3,
 h4 {
-	font-family: "Adelle Sans", sans-serif;
+	@extend %f-sans;
 }
 fieldset {
 	border: 0;
@@ -100,7 +100,7 @@ code {
 }
 
 .moreinfo__label {
-	font-family: "Adelle Sans", sans-serif;
+	@extend %f-sans;
 	font-size: small;
 }
 
@@ -132,7 +132,7 @@ code {
 
 	td {
 		position: relative;
-		height: 80px;
+		height: 100px;
 		padding: 0 20px;
 
 		&:first-child {
