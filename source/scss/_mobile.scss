@@ -9,6 +9,10 @@
 }
 
 @media screen and (max-width: 959px) {
+	.setMenu,
+	.topheader .madebymodo {
+		display: none;
+	}
 	body {
 		padding-top: 0px;
 	}
@@ -20,7 +24,7 @@
 	.bottomheader,
 	.topheader .madebymodo,
 	section {
-		display: none;
+		// display: none;
 	}
 
 	.topheader {
@@ -40,17 +44,17 @@
 	.mobile {
 		display: block;
 
-		p:last-child:after {
-			content: '';
-			width: 140%;
-			padding-bottom: 140%;
-			display: block;
-			background: url(images/continuum.png) top center no-repeat;
-			margin: -40px -20% 0 -20%;
-			background-size: contain;
-			max-width: 370px;
-			margin: 0 auto;
-		}
+		// p:last-child:after {
+		// 	content: '';
+		// 	width: 140%;
+		// 	// padding-bottom: 140%;
+		// 	display: block;
+		// 	// background: url(images/continuum.png) top center no-repeat;
+		// 	margin: -40px -20% 0 -20%;
+		// 	background-size: contain;
+		// 	max-width: 370px;
+		// 	margin: 0 auto;
+		// }
 	}
 
 	footer {
@@ -62,5 +66,24 @@
 	.licence {
 		float: none;
 		display: block;
+	}
+	.dataholder {
+		overflow: scroll;
+	}
+	.snippet {
+		font-size: 14px;
+		padding: 10px;
+		margin: 0 10px;
+	}
+
+	h3 {margin-left: 15%;}
+
+	.longdesc {
+		font-size: 14px;
+		padding-left: 1em;
+	}
+
+	ol {
+		margin: 0;
 	}
 }

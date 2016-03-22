@@ -29,13 +29,14 @@ ol.tour {
 
 	li {
 		width: 15%;
-		min-width: 120px;
+		min-width: 100px;
 		font-size: 14px;
 		margin-left: 0;
-		padding: 3em 2em;
+		padding: 3em 0;
 		position: relative;
-		display: block;
-		float: left;
+		list-style: none;
+		// display: block;
+		// float: left;
 		flex: 1 1 auto;
 		text-align: center;
 		counter-increment: tour-steps;
