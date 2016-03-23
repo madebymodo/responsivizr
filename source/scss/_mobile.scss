@@ -18,13 +18,13 @@
 	}
 
 	::-webkit-scrollbar:horizontal {
-		height: 12px;
+		height: 5px;
 	}
 
 	::-webkit-scrollbar-thumb {
 		background-color: rgba(0, 0, 0, .5);
 		border-radius: 10px;
-		border: 2px solid #ffffff;
+		// border: 2px solid #ffffff;
 	}
 
 	::-webkit-scrollbar-track {
@@ -97,7 +97,11 @@
 	.dataholder {
 		overflow-x: scroll;
 		padding-top: 1em;
+		padding-left: 0;
 		overflow: -moz-scrollbars-horizontal;
+	}
+	.datainput td {
+		padding: 0 5px;
 	}
 	.snippet {
 		font-size: 14px;
@@ -114,5 +118,19 @@
 
 	ol {
 		margin: 0;
+	}
+	.viewport__name {
+		width: 80px;
+	}
+	.viewport__bound {
+		width: 60px;
+		min-width: 60px;
+	}
+	.viewport__size {
+		width: 80px;
+	}
+	label.isInvalid::before,
+	label.isRequiredAndEmpty::before {
+		font-size: 11px;
 	}
 }
