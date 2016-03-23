@@ -102,11 +102,11 @@
 		</div>
 	</section>
 	<section class="pagebreakpoints">
-		<h3 data-action="toggleIsActive" data-target=".j-help_pagebreakpoints">Page breakpoints</h3>
-		<div class="hiddenWhenInactive j-help_pagebreakpoints isActive">
-			<p>This is where you define the responsive viewports of the layout, and how images behave within each viewport.</p>
-			<p>You define each viewport by entering the lower and upper bound in <code>px</code>, and assigning the viewport a name (e.g. <i>xsmall</i>, <i>small</i>, <i>tablet</i>, …).</p>
-			<p>You then specify the image size in <code>%</code> or <code>vw</code> for fluid images, <code>px</code> or <code>em</code> for fixed images (not scaling within the viewport).</p>
+		<h3>Page breakpoints</h3>
+		<p>Define the responsive viewports of the layout, and how images behave within each viewport. <a href="javascript:;" data-action="toggleIsActive" data-target=".j-help_pagebreakpoints">more...</a></p>
+		<div class="hiddenWhenInactive j-help_pagebreakpoints">
+			<p>Define each viewport by entering the lower and upper bound in <code>px</code>, and assigning the viewport a name (e.g. <i>xsmall</i>, <i>small</i>, <i>tablet</i>, …).</p>
+			<p>Then specify the image size in <code>%</code> (or <code>vw</code> for fluid images. For fixed size images use <code>px</code> or <code>em</code>.</p>
 			<p>Flag the <em>Art Directed</em> checkbox to mark a specific viewport for art direction (i.e. use a different image specifically for that viewport).</p>
 		</div>
 
@@ -157,15 +157,15 @@
 
 	</section>
 	<section class="imagebreakpoints">
-		<h3 data-action="toggleIsActive" data-target=".j-help_imagebreakpoints">Image breakpoints</h3>
-		<div class="hiddenWhenInactive j-help_imagebreakpoints isActive">
-			<p>This is where it gets interesting.</p>
-			<p>The graph shows the size your image will take across each viewport, for various pixel densities (hover on image blocks to read the exact dimensions).<br>
-			Image breakpoints define how many images are generated and referenced by the responsive image tag (be it the <code>&lt;img&gt;</code> or the <code>&lt;picture&gt;</code> element). Set them by clicking and dragging markers on the graph, and remember to specify the last one.
-			<p class="longdesc">The graph does not represent the responsive continuum (so it might well extend beyond the max-width size of the largest viewport. In fact, this is very likely, since high density images have a pixel size two, three or more times as big as their layout size). The graph simply shows the size your image takes on every viewport and for various display densities (2x, 3x, ...).<br>
-			This allows you to visually see how images designed for different viewports overlap in size, allowing to reuse an image on multiple viewports, reducing the overall number of images generated and optimizing over caching, editorial workflows, storage, etc..</p>
-			<p>Art directed sizes appear in their own graph and do not support additional input. This is because the browser must use the exact image specified in the source when the rendering conditions match the specific viewport size.</p>
-		</div>
+		<h3>Image breakpoints</h3>
+			<p>The graph shows the size your image will take across each viewport, for various pixel densities. <a href="javascript:;" data-action="toggleIsActive" data-target=".j-help_imagebreakpoints">more...</a></p>
+			<div class="hiddenWhenInactive j-help_imagebreakpoints">
+				<p>Hover on image blocks to read the exact dimensions (please consider that this is a tool thought to be used with a mouse).<br/>
+				Image breakpoints define how many images are generated and referenced by the responsive image tag. Set them by clicking and dragging markers on the graph, and remember to specify the last one.</p>
+				<p>The graph shows the size your image takes on every viewport and for various display densities (2x, 3x, ...).<br>
+				This allows you to visually see how images designed for different viewports overlap in size, allowing to reuse an image on multiple viewports, reducing the overall number of images generated and optimizing over caching, editorial workflows, storage, etc..</p>
+				<p>Art directed sizes appear in their own graph and do not support additional input. This is because the browser must use the exact image specified in the source when the rendering conditions match the specific viewport size.</p>
+			</div>
 
 
 		<figure>
