@@ -1,5 +1,20 @@
 .mobile {
-	margin: 0 10%;
+	margin: 10% 10%;
+	display: block;
+	font-size: 16px;
+	font-weight: normal;
+	border-left: 1px solid $c-modo;
+
+	h4 {
+		border-bottom: 0;
+		margin:0;
+		padding: 5% 0 0 5%;
+		color: $c-modo;
+	}
+	p {
+		padding: 0 0 5% 5%;
+		margin:0;
+	}
 }
 
 @media screen and (min-width: 680px) {
@@ -65,24 +80,23 @@
 
 			svg {
 				width: 80%;
+				max-width: 300px;
 			}
 		}
 	}
 
-	.mobile {
+	ol.tour {
 		display: block;
 
-		// p:last-child:after {
-		// 	content: '';
-		// 	width: 140%;
-		// 	// padding-bottom: 140%;
-		// 	display: block;
-		// 	// background: url(images/continuum.png) top center no-repeat;
-		// 	margin: -40px -20% 0 -20%;
-		// 	background-size: contain;
-		// 	max-width: 370px;
-		// 	margin: 0 auto;
-		// }
+		li {
+			width: 100%;
+			max-width: none;
+			padding: 1em 0;
+
+			&:before {
+				height: 40px;
+			}
+		}
 	}
 
 	footer {
