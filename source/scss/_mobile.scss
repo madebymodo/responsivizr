@@ -2,13 +2,13 @@
 	margin: 0 10%;
 }
 
-@media screen and (min-width: 960px) {
+@media screen and (min-width: 680px) {
 	.mobile {
 		display: none;
 	}
 }
 
-@media screen and (max-width: 959px) {
+@media screen and (max-width: 679px) {
 	::-webkit-scrollbar {
 		-webkit-appearance: none;
 	}
@@ -38,6 +38,7 @@
 	}
 	button {
 		font-size: 11px;
+		min-width: 0;
 	}
 
 	body {
@@ -94,15 +95,18 @@
 		float: none;
 		display: block;
 	}
-	.dataholder {
+
+	.pagebreakpoints .dataholder {
 		overflow-x: scroll;
 		padding-top: 1em;
 		padding-left: 0;
 		overflow: -moz-scrollbars-horizontal;
 	}
+
 	.datainput td {
 		padding: 0 5px;
 	}
+
 	.snippet {
 		font-size: 14px;
 		padding: 10px;
@@ -120,7 +124,7 @@
 		margin: 0;
 	}
 	.viewport__name {
-		width: 80px;
+		width: 90px;
 	}
 	.viewport__bound {
 		width: 60px;
