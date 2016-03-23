@@ -9,10 +9,37 @@
 }
 
 @media screen and (max-width: 959px) {
+	::-webkit-scrollbar {
+		-webkit-appearance: none;
+	}
+
+	::-webkit-scrollbar:vertical {
+		width: 12px;
+	}
+
+	::-webkit-scrollbar:horizontal {
+		height: 12px;
+	}
+
+	::-webkit-scrollbar-thumb {
+		background-color: rgba(0, 0, 0, .5);
+		border-radius: 10px;
+		border: 2px solid #ffffff;
+	}
+
+	::-webkit-scrollbar-track {
+		border-radius: 10px;
+		background-color: transparent;
+	}
 	.setMenu,
-	.topheader .madebymodo {
+	.topheader .madebymodo,
+	.chartinfo {
 		display: none;
 	}
+	button {
+		font-size: 11px;
+	}
+
 	body {
 		padding-top: 0px;
 	}
@@ -68,7 +95,9 @@
 		display: block;
 	}
 	.dataholder {
-		overflow: scroll;
+		overflow-x: scroll;
+		padding-top: 1em;
+		overflow: -moz-scrollbars-horizontal;
 	}
 	.snippet {
 		font-size: 14px;
