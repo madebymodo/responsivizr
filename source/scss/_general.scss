@@ -12,6 +12,10 @@ body {
 	padding-top: 150px;
 }
 
+a {
+	color: $c-modo;
+}
+
 h3,
 h4 {
 	@extend %f-sans;
