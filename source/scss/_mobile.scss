@@ -70,6 +70,12 @@
 		// display: none;
 	}
 
+	.dpi input {
+		min-width: 0;
+	}
+	.dpi span {
+		font-size: 13px;
+	}
 	.topheader {
 		border-bottom: 0;
 
