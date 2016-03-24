@@ -100,7 +100,7 @@
 	</section>
 	<section class="pagebreakpoints">
 		<h3>Page breakpoints</h3>
-		<p>Define the responsive viewports of the layout, and how images behave within each viewport.</p><p><a href="javascript:;" data-action="toggleIsActive" data-target=".j-help_pagebreakpoints">more&hellip;</a></p>
+		<p>Define the responsive viewports of the layout, and how images behave within each viewport.</p><p class="hiddenWhenInactive j-help_pagebreakpoints isActive"><a href="javascript:;" data-action="toggleIsActive" data-target=".j-help_pagebreakpoints">more&hellip;</a></p>
 		<div class="hiddenWhenInactive j-help_pagebreakpoints">
 			<p>Define each viewport by entering the lower and upper bound in <code>px</code>, and assigning the viewport a name (e.g. <i>xsmall</i>, <i>small</i>, <i>tablet</i>, …).</p>
 			<p>Then specify the image size in <code>%</code> (or <code>vw</code> for fluid images. For fixed size images use <code>px</code> or <code>em</code>.</p>
@@ -155,7 +155,7 @@
 	</section>
 	<section class="imagebreakpoints">
 		<h3>Image breakpoints</h3>
-			<p>The graph shows the size your image will take across each viewport, for various pixel densities.</p><p> <a href="javascript:;" data-action="toggleIsActive" data-target=".j-help_imagebreakpoints">more&hellip;</a></p>
+			<p>The graph shows the size your image will take across each viewport, for various pixel densities.</p><p class="hiddenWhenInactive j-help_imagebreakpoints isActive"> <a href="javascript:;" data-action="toggleIsActive" data-target=".j-help_imagebreakpoints">more&hellip;</a></p>
 			<div class="hiddenWhenInactive j-help_imagebreakpoints">
 				<p>Image breakpoints define how many images are generated and referenced by the responsive image tag (be it the <code>&lt;img&gt;</code> or the <code>&lt;picture&gt;</code> element). Set them by clicking and dragging markers on the graph, and remember to specify the last one.</p>
 				<p class="longdesc">The graph does not represent the responsive continuum (so it might well extend beyond the max-width size of the largest viewport. In fact, this is very likely, since high density images have a pixel size two, three or more times as big as their layout size). The graph simply shows the size your image takes on every viewport and for various display densities (2x, 3x, ...).<br>This allows you to visually see how images designed for different viewports overlap in size, allowing to reuse an image on multiple viewports, reducing the overall number of images generated and optimizing over caching, editorial workflows, storage, etc..</p>
