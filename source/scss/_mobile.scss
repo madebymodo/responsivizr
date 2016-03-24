@@ -1,6 +1,6 @@
 .mobile {
 	margin: 10% 10%;
-	display: block;
+	display: none;
 	font-size: 16px;
 	font-weight: normal;
 	border-left: 1px solid $c-modo;
@@ -11,71 +11,45 @@
 		padding: 5% 0 0 5%;
 		color: $c-modo;
 	}
+
 	p {
 		padding: 0 0 5% 5%;
 		margin:0;
 	}
 }
 
-@media screen and (min-width: 680px) {
-	.mobile {
-		display: none;
-	}
-}
-
 @media screen and (max-width: 679px) {
-	::-webkit-scrollbar {
-		-webkit-appearance: none;
+		body {
+		padding-top: 0px;
 	}
 
-	::-webkit-scrollbar:vertical {
-		width: 12px;
+	.mobile {
+		display: block;
 	}
 
-	::-webkit-scrollbar:horizontal {
-		height: 5px;
-	}
-
-	::-webkit-scrollbar-thumb {
-		background-color: rgba(0, 0, 0, .5);
-		border-radius: 10px;
-		// border: 2px solid #ffffff;
-	}
-
-	::-webkit-scrollbar-track {
-		border-radius: 10px;
-		background-color: transparent;
-	}
-	.setMenu,
-	.topheader .madebymodo,
+	.bottomheader,
 	.chartinfo {
 		display: none;
 	}
+
 	button {
 		font-size: 11px;
 		min-width: 0;
 	}
 
-	body {
-		padding-top: 0px;
-	}
 
 	header {
 		position: relative;
 	}
 
-	.bottomheader,
-	.topheader .madebymodo,
-	section {
-		// display: none;
-	}
-
 	.dpi input {
 		min-width: 0;
 	}
+
 	.dpi span {
 		font-size: 13px;
 	}
+
 	.topheader {
 		border-bottom: 0;
 
@@ -93,6 +67,9 @@
 
 	ol.tour {
 		display: block;
+		margin: 0 auto;
+		padding: 0 10%;
+		max-width: 300px;
 
 		li {
 			width: 100%;
@@ -116,11 +93,35 @@
 		display: block;
 	}
 
-	.pagebreakpoints .dataholder {
-		overflow-x: scroll;
-		padding-top: 1em;
-		padding-left: 0;
-		overflow: -moz-scrollbars-horizontal;
+	.pagebreakpoints {
+		::-webkit-scrollbar {
+			-webkit-appearance: none;
+		}
+
+		::-webkit-scrollbar:vertical {
+			width: 12px;
+		}
+
+		::-webkit-scrollbar:horizontal {
+			height: 5px;
+		}
+
+		::-webkit-scrollbar-thumb {
+			background-color: rgba(0, 0, 0, .5);
+			border-radius: 10px;
+		}
+
+		::-webkit-scrollbar-track {
+			border-radius: 10px;
+			background-color: transparent;
+		}
+
+		.dataholder {
+			overflow-x: scroll;
+			padding-top: 1em;
+			padding-left: 0;
+			overflow: -moz-scrollbars-horizontal;
+		}
 	}
 
 	.datainput td {
@@ -140,17 +141,15 @@
 		padding-left: 1em;
 	}
 
-	ol {
-		margin: 0;
-		padding: 0 10px;
-	}
 	.viewport__name {
 		width: 90px;
 	}
+
 	.viewport__bound {
 		width: 60px;
 		min-width: 60px;
 	}
+
 	.viewport__size {
 		width: 80px;
 	}

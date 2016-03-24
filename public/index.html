@@ -64,32 +64,32 @@
 
 
 		<div class="bottomheader">
-			<!-- <div class="currentSet">PROJECT: <span class="setName">My First Set</span></div> -->
-			<nav class="setMenu">
+			<!-- <a href="javascript:;" data-action="toggleIsActive" data-target=".j-menu">=</a> -->
+			<nav class="setMenu j-menu">
 				<ul>
-					<li><button data-action="newSet">New</button></li>
-					<li><a href="javascript:void(0);" class="setList__wrapper">Load <ul class="setList"></ul></a></li>
-					<li><button data-action="deleteSet">Delete</button></li>
-					<li><button data-action="exportSet">Share</button></li>
-					<li><button data-action="exportData">Share all</button></li>
+					<li class="setMenu--new"><button data-action="newSet">New</button></li>
+					<li class="setMenu--load"><a href="javascript:void(0);" class="setList__wrapper">Load <ul class="setList"></ul></a></li>
+					<li class="setMenu--delete"><button data-action="deleteSet">Delete</button></li>
+					<li class="setMenu--share"><button data-action="exportSet">Share</button></li>
+					<li class="setMenu--shareall"><button data-action="exportData">Share all</button></li>
 				</ul>
 			</nav>
 		</div>
 	</header>
 	<section class="intro">
-		<p><strong>Responsivizr</strong> is a visual tool to show how responsive images behave across viewports in <abbr title="Responsive Web Design">RWD</abbr>.</p>
+		<p><strong>Responsivizr</strong> is a visual tool to show how responsive images behave across viewports in Responsive Web Design.</p>
 		<p>It helps you choose the most effective image sizes and provides the HTML snippets to integrate into your code in <strong>three steps</strong>.</p>
  		<ol class="tour">
 			<li><strong>Define viewports</strong> through page breakpoints and specify how image behaves in each viewport</li>
 			<li><strong>Specify image breakpoints</strong> using the generated graph</li>
-			<li>Grab the HTML output and paste it in your code</li>
+			<li><strong>Grab the HTML output</strong> and paste it in your code</li>
 		</ol>
 		<section class="mobile">
 			<h4>Disclaimer</h4>
 			<p>Responsivizr really needs a desktop browser to give its best. Feel free to get a taste of it, but be sure to come back on a desktop browser.</p>
 		</section>
 		<!-- <p>Ready to start?</p> -->
-		<p>Name your project* or <a href="/#sets:eyJjdXJyZW50U2V0IjowLCJzZXRzIjpbeyJuIjoiZXhhbXBsZSIsImN1dHMiOls0MDUsNzIwLDgyOSw2MDgsOTQyLDEwMDBdLCJjdXJyZW50U25pcHBldCI6ImlubGluZSIsIm1xIjpbeyJzaXplIjoiOTAlIiwiYXJ0RGlyZWN0ZWQiOmZhbHNlfSx7InNpemUiOiI1MCUiLCJhcnREaXJlY3RlZCI6ZmFsc2V9LHsic2l6ZSI6IjMwJSIsImFydERpcmVjdGVkIjpmYWxzZX1dLCJicCI6W3sic2l6ZSI6IjMyMHB4In0seyJzaXplIjoiNzAwcHgiLCJsYWJlbCI6InNtYWxsIn0seyJzaXplIjoiMTAwMHB4IiwibGFiZWwiOiJtZWRpdW0ifSx7InNpemUiOiIxMjAwcHgiLCJsYWJlbCI6ImxhcmdlIn1dLCJkcGkiOnsiMSI6dHJ1ZSwiMiI6dHJ1ZSwiMyI6ZmFsc2UsIjQiOmZhbHNlfX1dfQ==">load a demo set</a>.<br><small>*it will also be used to name images in the HTML snippet</small></p>
+		<p>Name your project* or <a href="http://responsivizr.com/#sets:eyJjdXJyZW50U2V0IjowLCJzZXRzIjpbeyJuIjoiZGVtbyBzZXQiLCJjdXRzIjpbNDA1LDcyMCw4MjksNjA4LDk0MiwxMDAwXSwiY3VycmVudFNuaXBwZXQiOiJpbmxpbmUiLCJtcSI6W3sic2l6ZSI6IjkwJSIsImFydERpcmVjdGVkIjpmYWxzZX0seyJzaXplIjoiNTAlIiwiYXJ0RGlyZWN0ZWQiOmZhbHNlfSx7InNpemUiOiIzMCUiLCJhcnREaXJlY3RlZCI6ZmFsc2V9XSwiYnAiOlt7InNpemUiOiIzMjBweCJ9LHsic2l6ZSI6IjcwMHB4IiwibGFiZWwiOiJzbWFsbCJ9LHsic2l6ZSI6IjEwMDBweCIsImxhYmVsIjoibWVkaXVtIn0seyJzaXplIjoiMTIwMHB4IiwibGFiZWwiOiJsYXJnZSJ9XSwiZHBpIjp7IjEiOnRydWUsIjIiOnRydWUsIjMiOmZhbHNlLCI0IjpmYWxzZX19XX0=">load a demo set</a>.<br><small>*it will also be used to name images in the HTML snippet</small></p>
 
 		<div class="dataholder projectName">
 			<label>
@@ -100,7 +100,7 @@
 	</section>
 	<section class="pagebreakpoints">
 		<h3>Page breakpoints</h3>
-		<p>Define the responsive viewports of the layout, and how images behave within each viewport.</p><p> <a href="javascript:;" data-action="toggleIsActive" data-target=".j-help_pagebreakpoints">more&hellip;</a></p>
+		<p>Define the responsive viewports of the layout, and how images behave within each viewport.</p><p><a href="javascript:;" data-action="toggleIsActive" data-target=".j-help_pagebreakpoints">more&hellip;</a></p>
 		<div class="hiddenWhenInactive j-help_pagebreakpoints">
 			<p>Define each viewport by entering the lower and upper bound in <code>px</code>, and assigning the viewport a name (e.g. <i>xsmall</i>, <i>small</i>, <i>tablet</i>, …).</p>
 			<p>Then specify the image size in <code>%</code> (or <code>vw</code> for fluid images. For fixed size images use <code>px</code> or <code>em</code>.</p>
@@ -155,11 +155,12 @@
 	</section>
 	<section class="imagebreakpoints">
 		<h3>Image breakpoints</h3>
-			<p>The graph shows the size your image will take across each viewport, for various pixel densities (hover on image blocks to read the exact dimensions).</p><p> <a href="javascript:;" data-action="toggleIsActive" data-target=".j-help_imagebreakpoints">more&hellip;</a></p>
+			<p>The graph shows the size your image will take across each viewport, for various pixel densities.</p><p> <a href="javascript:;" data-action="toggleIsActive" data-target=".j-help_imagebreakpoints">more&hellip;</a></p>
 			<div class="hiddenWhenInactive j-help_imagebreakpoints">
 				<p>Image breakpoints define how many images are generated and referenced by the responsive image tag (be it the <code>&lt;img&gt;</code> or the <code>&lt;picture&gt;</code> element). Set them by clicking and dragging markers on the graph, and remember to specify the last one.</p>
 				<p class="longdesc">The graph does not represent the responsive continuum (so it might well extend beyond the max-width size of the largest viewport. In fact, this is very likely, since high density images have a pixel size two, three or more times as big as their layout size). The graph simply shows the size your image takes on every viewport and for various display densities (2x, 3x, ...).<br>This allows you to visually see how images designed for different viewports overlap in size, allowing to reuse an image on multiple viewports, reducing the overall number of images generated and optimizing over caching, editorial workflows, storage, etc..</p>
 			<p>Art directed sizes appear in their own graph and do not support additional input. This is because the browser must use the exact image specified in the source when the rendering conditions match the specific viewport size.</p>
+
 			</div>
 
 
@@ -186,6 +187,7 @@
 									<kbd>shift</kbd> + <kbd title="left arrow">&larr;</kbd> and <kbd>shift</kbd> + <kbd title="right arrow">&rarr;</kbd> move the selected marker <strong>10px left</strong> or <strong>10px right</strong><br>
 									<kbd title="delete">DEL</kbd> or <kbd>backspace</kbd> delete the selected breakpoint
 								</p>
+								<p>Hover on image blocks to read the exact dimensions</p>
 							</div>
 							<div class="chartinfo__text--ad">
 								<p>Nothing to do here: art directed images don't need cuts.</p>
