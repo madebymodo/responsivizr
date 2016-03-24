@@ -14,6 +14,17 @@ body {
 
 a {
 	color: $c-modo;
+	text-decoration: none;
+	text-shadow: 1px 0 0 white, -1px 0 0 white, 2px 0 0 white, -2px 0 0 white;
+	background-image: linear-gradient(to left, rgba($c-modo, 0.5), rgba($c-modo, 0.5));
+	background-position: 0 1.1em;
+	background-repeat: repeat-x;
+	background-size: 1px 1px;
+
+	&:hover {
+		text-decoration: none;
+		background-image: linear-gradient(to left, rgba($c-modo, 1), rgba($c-modo, 1));
+	}
 }
 
 h3,
@@ -95,6 +106,11 @@ code {
 	border-radius: .2rem;
 	background: #f9f9f9;
 	color: #c25;
+}
+
+small {
+	font-style: italic;
+	font-size: 11px;
 }
 
 .longdesc {
@@ -192,12 +208,12 @@ button.removeBreakpoint {
 	line-height: 1.4;
 	font-weight: 100;
 
-	a {
-		text-decoration: none;
-		color: $c-modo;
-
-		&:hover {
-			text-decoration: underline;
-		}
-	}
+	// a {
+	// 	text-decoration: none;
+	// 	color: $c-modo;
+	//
+	// 	&:hover {
+	// 		text-decoration: underline;
+	// 	}
+	// }
 }
