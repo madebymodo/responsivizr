@@ -140,9 +140,10 @@
 		padding-left: 1em;
 	}
 
-	ol {
-		margin: 0;
-		padding: 0 10px;
+	ol.tour {
+		margin: 0 auto;
+		padding: 0 10%;
+		max-width: 300px;
 	}
 	.viewport__name {
 		width: 90px;
