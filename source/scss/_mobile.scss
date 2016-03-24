@@ -142,6 +142,7 @@
 
 	ol {
 		margin: 0;
+		padding: 0 10px;
 	}
 	.viewport__name {
 		width: 90px;
@@ -153,7 +154,7 @@
 	.viewport__size {
 		width: 80px;
 	}
-	
+
 	label.isInvalid::before,
 	label.isRequiredAndEmpty::before {
 		font-size: 11px;
