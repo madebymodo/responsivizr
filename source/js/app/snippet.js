@@ -10,10 +10,37 @@ app = function(app) {
 						sources = [],
 						sizes = [],
 						srcset = [],
-						img = "";
+						img = "",
+						minDpi = Infinity,
+						maxDpi = 0,
+						min = Infinity,
+						max = 0,
+						tmpMin,
+						tmpMax,
+						tmpSize;
 					///var
+					for(var i in set.mq) {
+						if(set.mq[i].artDirected)
+							continue;
+						tmpSize = app.parseVal(set.mq[i].size);
+						tmpMin = app.getPx(tmpSize, set.bp[i * 1].size);
+						tmpMax = app.getPx(tmpSize, set.bp[i * 1 + 1].size);
+						if(min > tmpMin)
+							min = tmpMin;
+						if(max < tmpMax)
+							max = tmpMax;
+					}
+					for(var dpi in set.dpi)
+						if(set.dpi[dpi]) {
+							if(minDpi > dpi)
+								minDpi = dpi;
+							if(maxDpi < dpi)
+								maxDpi = dpi;
+						}
+					min *= minDpi;
+					max *= maxDpi;
 					for(var i in set.cuts)
-						if((set.cuts[i] >= app.chart.min) && (set.cuts[i] <= app.chart.max))
+						if((set.cuts[i] >= min) && (set.cuts[i] <= max))
 							srcset.push(set.cuts[i]);
 					srcset.sort(function(a, b) {
 						return a - b;
@@ -41,7 +68,7 @@ app = function(app) {
 							sizes.push(maxWidth + ((maxWidth != "") ? " " : "") + w.v + ((w.u == "%") ? "vw" : w.u));
 						}
 					}
-					if(sizes.length > 0) 
+					if(sizes.length > 0)
 						img = '<span class="snippet__attr">sizes</span><span class="snippet__equal">=</span><span class="snippet__quote">"</span><span class="snippet__value"><span class="snippet__sizesItem">' + sizes.join(', </span><span class="snippet__sizesItem">') + '</span></span><span class="snippet__quote">"</span> <span class="snippet__attr">srcset</span><span class="snippet__equal">=</span><span class="snippet__quote">"</span><span class="snippet__value"><span class="snippet__srcsetItem">' + srcset.join(', </span><span class="snippet__srcsetItem">') + '</span></span><span class="snippet__quote">"</span> ';
 					img = '<span class="snippet__img">&lt;img ' + img + '<span class="snippet__attr">src</span><span class="snippet__equal">=</span><span class="snippet__quote">"</span><span class="snippet__value">' + name + '.' + fileExtension + '</span><span class="snippet__quote">"</span> <span class="snippet__attr">alt</span><span class="snippet__equal">=</span><span class="snippet__quote">"</span><span class="snippet__value">' + app.htmlspecialchars(set.n) + '</span><span class="snippet__quote">"</span>&gt;</span>';
 					if(sources.length > 0)
