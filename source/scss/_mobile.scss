@@ -153,11 +153,9 @@
 	.viewport__size {
 		width: 80px;
 	}
+	
 	label.isInvalid::before,
 	label.isRequiredAndEmpty::before {
 		font-size: 11px;
-	}
-	.image__ad {
-		display: table;
 	}
 }
