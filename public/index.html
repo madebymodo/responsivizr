@@ -155,11 +155,12 @@
 	</section>
 	<section class="imagebreakpoints">
 		<h3>Image breakpoints</h3>
-			<p>The graph shows the size your image will take across each viewport, for various pixel densities (hover on image blocks to read the exact dimensions).</p><p> <a href="javascript:;" data-action="toggleIsActive" data-target=".j-help_imagebreakpoints">more&hellip;</a></p>
+			<p>The graph shows the size your image will take across each viewport, for various pixel densities.</p><p> <a href="javascript:;" data-action="toggleIsActive" data-target=".j-help_imagebreakpoints">more&hellip;</a></p>
 			<div class="hiddenWhenInactive j-help_imagebreakpoints">
 				<p>Image breakpoints define how many images are generated and referenced by the responsive image tag (be it the <code>&lt;img&gt;</code> or the <code>&lt;picture&gt;</code> element). Set them by clicking and dragging markers on the graph, and remember to specify the last one.</p>
 				<p class="longdesc">The graph does not represent the responsive continuum (so it might well extend beyond the max-width size of the largest viewport. In fact, this is very likely, since high density images have a pixel size two, three or more times as big as their layout size). The graph simply shows the size your image takes on every viewport and for various display densities (2x, 3x, ...).<br>This allows you to visually see how images designed for different viewports overlap in size, allowing to reuse an image on multiple viewports, reducing the overall number of images generated and optimizing over caching, editorial workflows, storage, etc..</p>
 			<p>Art directed sizes appear in their own graph and do not support additional input. This is because the browser must use the exact image specified in the source when the rendering conditions match the specific viewport size.</p>
+
 			</div>
 
 
@@ -186,6 +187,7 @@
 									<kbd>shift</kbd> + <kbd title="left arrow">&larr;</kbd> and <kbd>shift</kbd> + <kbd title="right arrow">&rarr;</kbd> move the selected marker <strong>10px left</strong> or <strong>10px right</strong><br>
 									<kbd title="delete">DEL</kbd> or <kbd>backspace</kbd> delete the selected breakpoint
 								</p>
+								<p>Hover on image blocks to read the exact dimensions</p>
 							</div>
 							<div class="chartinfo__text--ad">
 								<p>Nothing to do here: art directed images don't need cuts.</p>
