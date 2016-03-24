@@ -64,20 +64,20 @@
 
 
 		<div class="bottomheader">
-			<!-- <div class="currentSet">PROJECT: <span class="setName">My First Set</span></div> -->
-			<nav class="setMenu">
+			<!-- <a href="javascript:;" data-action="toggleIsActive" data-target=".j-menu">=</a> -->
+			<nav class="setMenu j-menu">
 				<ul>
-					<li><button data-action="newSet">New</button></li>
-					<li><a href="javascript:void(0);" class="setList__wrapper">Load <ul class="setList"></ul></a></li>
-					<li><button data-action="deleteSet">Delete</button></li>
-					<li><button data-action="exportSet">Share</button></li>
-					<li><button data-action="exportData">Share all</button></li>
+					<li class="setMenu--new"><button data-action="newSet">New</button></li>
+					<li class="setMenu--load"><a href="javascript:void(0);" class="setList__wrapper">Load <ul class="setList"></ul></a></li>
+					<li class="setMenu--delete"><button data-action="deleteSet">Delete</button></li>
+					<li class="setMenu--share"><button data-action="exportSet">Share</button></li>
+					<li class="setMenu--shareall"><button data-action="exportData">Share all</button></li>
 				</ul>
 			</nav>
 		</div>
 	</header>
 	<section class="intro">
-		<p><strong>Responsivizr</strong> is a visual tool to show how responsive images behave across viewports in <abbr title="Responsive Web Design">RWD</abbr>.</p>
+		<p><strong>Responsivizr</strong> is a visual tool to show how responsive images behave across viewports in Responsive Web Design.</p>
 		<p>It helps you choose the most effective image sizes and provides the HTML snippets to integrate into your code in <strong>three steps</strong>.</p>
  		<ol class="tour">
 			<li><strong>Define viewports</strong> through page breakpoints and specify how image behaves in each viewport</li>
@@ -100,7 +100,7 @@
 	</section>
 	<section class="pagebreakpoints">
 		<h3>Page breakpoints</h3>
-		<p>Define the responsive viewports of the layout, and how images behave within each viewport.</p><p> <a href="javascript:;" data-action="toggleIsActive" data-target=".j-help_pagebreakpoints">more&hellip;</a></p>
+		<p>Define the responsive viewports of the layout, and how images behave within each viewport.</p><p><a href="javascript:;" data-action="toggleIsActive" data-target=".j-help_pagebreakpoints">more&hellip;</a></p>
 		<div class="hiddenWhenInactive j-help_pagebreakpoints">
 			<p>Define each viewport by entering the lower and upper bound in <code>px</code>, and assigning the viewport a name (e.g. <i>xsmall</i>, <i>small</i>, <i>tablet</i>, …).</p>
 			<p>Then specify the image size in <code>%</code> (or <code>vw</code> for fluid images. For fixed size images use <code>px</code> or <code>em</code>.</p>
