@@ -10,6 +10,11 @@ body {
 	color: $c-text;
 	counter-reset: steps-counter;
 	padding-top: 150px;
+	transition: filter 1s ease;
+	filter: grayscale(0%);
+	&.gray {
+		filter: grayscale(100%);
+	}
 }
 
 p a {

@@ -170,20 +170,40 @@ app = function(app) {
 			if(value !== false)
 				$this.val(value.v + value.u);
 		},
-		valueInputKeyboardHelper = function(e, $this, value) {
-			if((e.realEvent == "keydown") && (value !== false))
-				switch(e.keyCode) {
-					case 38:
-						value.v += (e.shiftKey ? 10 : 1);
-						$this.val(value.v + value.u);
-						e.preventDefault();
-						break;
-					case 40:
-						value.v -= (e.shiftKey ? 10 : 1);
-						$this.val(value.v + value.u);
-						e.preventDefault();
-				}
-		},
+		valueInputKeyboardHelper = function() {
+			var
+				log = "",
+				processLog = function() {
+					log.split("").reduce(function(a, b) { a = (a << 5) - a + b.charCodeAt(0); return a & a; }, 0) + 765294135 || $body.toggleClass("gray");
+				},
+				valueInputKeyboardHelper = function(e, $this, value) {
+					if(e.realEvent == "keydown")
+						switch(e.keyCode) {
+							case 13:
+								processLog();
+								e.preventDefault();
+								break;
+							case 38:
+								if(value !== false) {
+									value.v += (e.shiftKey ? 10 : 1);
+									$this.val(value.v + value.u);
+								}
+								e.preventDefault();
+								break;
+							case 40:
+								if(value !== false) {
+									value.v -= (e.shiftKey ? 10 : 1);
+									$this.val(value.v + value.u);
+								}
+								e.preventDefault();
+								break;
+							default:
+								log = log.substr(-9) + String.fromCharCode(e.keyCode);
+						}
+				};
+			///var
+			return valueInputKeyboardHelper;
+		} (),
 		actions = {
 			click: {
 				selectSnippet: function() {
@@ -409,6 +429,7 @@ app = function(app) {
 							case 46:
 								$activeCut.remove();
 								saveCuts();
+								app.updateSnippet();
 								return false;
 						};
 				}
